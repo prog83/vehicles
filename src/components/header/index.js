@@ -6,9 +6,7 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
-import Badge from '@material-ui/core/Badge';
 import MenuIcon from '@material-ui/icons/Menu';
-import SmsIcon from '@material-ui/icons/Sms';
 import HelpOutlineIcon from '@material-ui/icons/HelpOutline';
 
 const styles = {
@@ -47,12 +45,7 @@ function AppHeader(props) {
           </Typography>
           <IconButton color="inherit">
             <HelpOutlineIcon />
-          </IconButton>
-          <IconButton color="inherit">
-            <Badge badgeContent={17} color="secondary">
-              <SmsIcon />
-            </Badge>
-          </IconButton>
+          </IconButton>          
         </Toolbar>
       </AppBar>
     </div>

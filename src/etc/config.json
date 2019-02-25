@@ -1,0 +1,4 @@
+{
+  "apiPrefix": "http://services.in.np.gov.ua/api/v1/registerVehiclesOwners",
+  "apiMetod": "GetVehiclesByLicensePlate"
+}

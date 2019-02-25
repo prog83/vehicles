@@ -7,7 +7,7 @@ export default class App extends Component {
   render() {
     return (
       <div id="container">
-        <AppHeader title="Позбавлення ПКТЗ" />        
+        <AppHeader title="Зареєстрований АМТ" />        
         <AppBody />
       </div>
     );
