@@ -4,6 +4,7 @@ import { withStyles } from '@material-ui/core/styles';
 import Typography from "@material-ui/core/Typography";
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
+import LinearProgress from '@material-ui/core/LinearProgress';
 
 import getVehiclesByLicensePlate from "../../lib/api";
 
@@ -69,8 +70,6 @@ class AppBody extends Component {
     let data;    
     if (error) {
       data = <div>Error: {error.message}</div>;
-    } else if (!isLoaded) {
-      data = <div>Loading...</div>;
     } else {
       if (items) {
         data = (<ul>
@@ -84,11 +83,13 @@ class AppBody extends Component {
       }
     }
 
-    return (
+    return (      
       <div className={classes.containerBody}>
         <Typography variant="h5" align="center">
           Пошук АМТ
         </Typography>
+        {/* {!isLoaded ? hidden : null} */}
+        <LinearProgress hidden={isLoaded} variant="query" />
         
         <div className={classes.containerFind}>
           {/* < autoComplete="off"> */}
@@ -102,8 +103,8 @@ class AppBody extends Component {
                 InputLabelProps={{
                   shrink: true,
                 }}
-              />
-              <Button 
+              />              
+              <Button
                 variant="contained" 
                 className={classes.button}
                 onClick={this.getData}>
